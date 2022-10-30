@@ -1,0 +1,17 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+    <h1>Viajes en Avion </h1>    
+    <h4>Estos son los destinos en Avion</h4>
+    <ul>
+        
+        {% for avion in lista_aviones %}
+            <li>{{avion.lugar_de_viaje}} - {{avion.precio}} - {{avion.hora_vuelo}} - {{avion.estadia}}</li>
+        {% endfor %}
+            
+    </ul>
+{% endblock contenidoQueCambia %}   
+
+    

@@ -1,0 +1,18 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+    <h1>Viajes en Colectivo </h1>    
+    <h4>Estos son los destinos en Colectivo</h4>
+    <ul>
+        
+        {% for colectivo in lista_colectivos %}
+            <li>{{colectivo.lugar_de_viaje}} - {{colectivo.precio}} - {{colectivo.hora_colectivo}} - {{colectivo.estadia}}</li>
+        {% endfor %}
+            
+    </ul>
+{% endblock contenidoQueCambia %}   
+
+
+   

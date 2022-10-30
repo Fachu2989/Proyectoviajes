@@ -1,0 +1,15 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+    <h1>Paquetes en Colectivo </h1>    
+    <h4>Estos son los Paquetes que disponemos</h4>
+    <ul>
+        
+        {% for paquete in lista_paquetes %}
+            <li>{{paquete.lugar_de_viaje}} - {{paquete.precio}} - {{paquete.hotel_colectivo}} - {{paquete.estadia}}</li>
+        {% endfor %}
+            
+    </ul>
+{% endblock contenidoQueCambia %}   
