@@ -8,7 +8,7 @@
     <ul>
         
         {% for avion in lista_aviones %}
-            <li>{{avion.lugar_de_viaje}} - {{avion.precio}} - {{avion.hora_vuelo}} - {{avion.estadia}}</li>
+            <li>{{avion.lugar_de_viaje}} - ${{avion.precio}} - hora de vuelo es {{avion.hora_vuelo}} horas y la estadia es de {{avion.estadia}} dias</li>
         {% endfor %}
             
     </ul>

@@ -8,7 +8,7 @@
     <ul>
         
         {% for paquete in lista_paquetes %}
-            <li>{{paquete.lugar_de_viaje}} - {{paquete.precio}} - {{paquete.hotel_colectivo}} - {{paquete.estadia}}</li>
+            <li>{{paquete.lugar_de_viaje}} - ${{paquete.precio}} - El hotel en este paquete es: {{paquete.hotel_colectivo}} y los dias de estadia en ese paquete es de {{paquete.estadia}} dias</li>
         {% endfor %}
             
     </ul>

@@ -10,5 +10,6 @@ urlpatterns = [
     path("colectivos/", colectivos, name="Colectivos"),
     path("paquete/", paquetes, name="Paquetes"),
     path("", inicio, name="Inicio" ),
+    
 ]
     

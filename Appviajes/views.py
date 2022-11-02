@@ -32,15 +32,15 @@ def paquete(request, lugar_de_viaje, precio,hotel_colectivo,estadia):
 
 def inicio(request):
     return render(request,"inicio.html")
-
+    
 def aviones(request):
-    lista=Avion.objects.all
+    lista=Avion.objects.all()
     return render(request,"aviones.html", {"lista_aviones":lista})
 
 def colectivos(request):
-    lista=Colectivo.objects.all
+    lista=Colectivo.objects.all()
     return render(request,"colectivos.html", {"lista_colectivos":lista})
 
 def paquetes(request):
-    lista=Paquete.objects.all
+    lista=Paquete.objects.all()
     return render(request,"paquetes.html", {"lista_paquetes":lista})
