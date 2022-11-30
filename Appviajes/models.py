@@ -9,7 +9,7 @@ class Avion(models.Model):
     estadia = models.IntegerField()
 
     def __str__(self) -> str:
-        return f"{self.lugar_de_viaje} - {self.precio} - {self.hora_vuelo} - {self.estadia}"
+        return f"{self.lugar_de_viaje} - ${self.precio} - {self.hora_vuelo} horas - {self.estadia} dias"
 
 class Colectivo(models.Model):
     lugar_de_viaje = models.CharField(max_length=50)

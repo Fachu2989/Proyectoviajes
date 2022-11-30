@@ -1,91 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         {% load static %}
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Pagina de inicio</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Bootstrap icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Vanilla Bootstrap v4.2.1 Theme</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/fontAwesome.css' %}">
+        <link rel="stylesheet" href="{% static 'css/hero-slider.css' %}">
+        <link rel="stylesheet" href="{% static 'css/templatemo-main.css' %}">
+        <link rel="stylesheet" href="{% static 'css/owl-carousel.css' %}">
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
-    <body>
-        <!-- Navigation-->
-        <nav class="navbar navbar-light bg-light static-top">
-            <div class="container">
-                <a class="navbar-brand" href="{% url "Inicio" %}">Inicio</a>
-                <a class="navbar-brand" href="{% url "Aviones" %}">Aviones</a>
-                <a class="navbar-brand" href="{% url "Colectivos" %}">Colectivos</a>
-                <a class="navbar-brand" href="{% url "Paquetes" %}">Paquetes</a>
-                <a class="btn btn-primary" href="#signup">Iniciar</a>
-            </div>
-        </nav>
-        <!-- Masthead-->
-        <header class="masthead">
-            <div class="container position-relative">
-                <div class="row justify-content-center">
-                    <div class="col-xl-6">
-                        <div class="text-center text-white">
-                            <!-- Page heading-->
-                            <h1 class="mb-5">Despegate</h1>
-                            <h2>Agencia de viajes</h2>
-                        </div>
-                    </div>
+<!--
+Vanilla Template
+https://templatemo.com/tm-526-vanilla
+-->
+<body>
+
+    <div class="fixed-side-navbar">
+        <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#home"><span>Intro</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'ListaAviones' %}"><span>Aviones</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#portfolio"><span>Portfolio</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#our-story"><span>Our Story</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact-us"><span>Contact Us</span></a></li>
+        </ul>
+    </div>
+
+    <div class="parallax-content baner-content" id="home">
+        <div class="container">
+            <div class="first-content">
+                <h1>Vanilla</h1>
+                <span><em>Bootstrap</em> v4.2.1 Theme</span>
+                <div class="primary-button">
+                    <a href="#services">Discover More</a>
                 </div>
             </div>
-        </header>
-        
-        {% block contenidoQueCambia %}
+        </div>
+    </div>
+
+    {% block contenidoQueCambia %}
             
-        {% endblock contenidoQueCambia %}
+    {% endblock contenidoQueCambia %}
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="primary-button">
+                        <a href="#home">Back To Top</a>
+                    </div>
+                    <ul>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google"></i></a></li>
+                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                    </ul>
+                    <p>Copyright &copy; 2019 Company Name 
             
-        <!-- Footer-->
-        <footer class="footer bg-light">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
-                        <ul class="list-inline mb-2">
-                            <li class="list-inline-item"><a href="#!">About</a></li>
-                            <li class="list-inline-item">⋅</li>
-                            <li class="list-inline-item"><a href="#!">Contact</a></li>
-                            <li class="list-inline-item">⋅</li>
-                            <li class="list-inline-item"><a href="#!">Terms of Use</a></li>
-                            <li class="list-inline-item">⋅</li>
-                            <li class="list-inline-item"><a href="#!">Privacy Policy</a></li>
-                        </ul>
-                        <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2022. All Rights Reserved.</p>
-                    </div>
-                    <div class="col-lg-6 h-100 text-center text-lg-end my-auto">
-                        <ul class="list-inline mb-0">
-                            <li class="list-inline-item me-4">
-                                <a href="#!"><i class="bi-facebook fs-3"></i></a>
-                            </li>
-                            <li class="list-inline-item me-4">
-                                <a href="#!"><i class="bi-twitter fs-3"></i></a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#!"><i class="bi-instagram fs-3"></i></a>
-                            </li>
-                        </ul>
-                    </div>
+            		- Design: <a rel="nofollow noopener" href="https://templatemo.com"><em>TemplateMo</em></a></p>
                 </div>
             </div>
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    </body>
+        </div>
+    </footer>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        function openCity(cityName) {
+            var i;
+            var x = document.getElementsByClassName("city");
+            for (i = 0; i < x.length; i++) {
+               x[i].style.display = "none";  
+            }
+            document.getElementById(cityName).style.display = "block";  
+        }
+    </script>
+
+    <script>
+        $(document).ready(function(){
+          // Add smooth scrolling to all links
+          $(".fixed-side-navbar a, .primary-button a").on('click', function(event) {
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+              // Prevent default anchor click behavior
+              event.preventDefault();
+
+              // Store hash
+              var hash = this.hash;
+
+              // Using jQuery's animate() method to add smooth page scroll
+              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 800, function(){
+           
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              });
+            } // End if
+          });
+        });
+    </script>
+
+</body>
 </html>

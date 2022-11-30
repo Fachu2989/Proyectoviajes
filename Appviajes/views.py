@@ -1,6 +1,11 @@
 from django.shortcuts import render
 from .models import Avion, Colectivo, Paquete
 from django.http import HttpResponse
+from django.views.generic import ListView
+from django.views.generic.detail import DetailView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+
+
 # Create your views here.
 def avion(request, lugar_de_viaje, precio,hora_vuelo,estadia):
 
@@ -44,3 +49,47 @@ def colectivos(request):
 def paquetes(request):
     lista=Paquete.objects.all()
     return render(request,"paquetes.html", {"lista_paquetes":lista})
+
+
+#Busqueda Aviones
+def busquedaLugar_avion(request):
+    return render (request, 'busquedaLugar_avion.html')
+
+def buscaravion(request):
+    lugar_buscada= request.GET['lugar_de_viaje']
+    avion= Avion.objects.get(lugar_de_viaje=lugar_buscada)
+    return render(request,'resultado_busqueda_avion.html',{"avion":avion, "lugar_de_viaje": lugar_buscada})
+
+#CRUD vista basada en clase (curso)
+class AvionList(ListView):
+
+    model = Avion
+    template_name = 'avion_list.html'
+    context_object_name = "Aviones"
+
+class AvionDetail(DetailView):
+
+    model = Avion
+    template_name = 'avion_detail.html'
+    context_object_name = "avion"
+
+class AvionCreate(CreateView):
+
+    model = Avion
+    template_name = 'avion_create.html'
+    fields = ('__all__')
+    success_url = '/viajes/'
+
+class AvionUpdate(UpdateView):
+
+    model = Avion
+    template_name = 'avion_update.html'
+    fields = ('__all__')
+    success_url = '/viajes/'
+
+class AvionDelete(DeleteView):
+
+    model = Avion
+    template_name = 'avion_delete.html'
+    success_url = '/viajes/'
+ 

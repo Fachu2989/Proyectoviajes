@@ -1,0 +1,12 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+    <h1>El vuelo que esta buscando es  {{lugar_de_viaje}}</h1>
+    <h4>El precio es de ${{avion.precio}}, la hora de vuelo es de {{avion.hora_vuelo}} y los dias en {{avion.lugar_de_viaje}} es de {{avion.estadia}} dias</h4>
+{% endblock contenidoQueCambia %}  
+
+
+

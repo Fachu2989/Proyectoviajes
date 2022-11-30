@@ -1,0 +1,14 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+
+{% block contenidoQueCambia %}
+
+    <h1>Vista en detalle del avion</h1>
+
+
+    <h3>avion a {{avion.lugar_de_viaje}}, con precio de {{avion.precio}}, las horas de vuelos son {{avion.hora_vuelo}} y los dias de estadia son {{avion.estadia}}</h3>
+
+{% endblock contenidoQueCambia %}
+

@@ -1,0 +1,11 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+    <form action='{% url "buscaravion" %}'method="GET">{% csrf_token %}
+        <p>Ingrese el lugar de vuelo que esta buscando</p>
+        <input type="text"name="lugar_de_viaje" id="lugar_de_viaje">
+        <input type="submit"value="Buscar Vuelo">
+    </form>
+{% endblock contenidoQueCambia %}   
